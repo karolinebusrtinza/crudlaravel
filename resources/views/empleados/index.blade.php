@@ -13,9 +13,9 @@
             <th>#</th>
             <th>Foto</th>
             <th>Nombre</th>
-            <th>Precio</th>
-            <th>Marca</th>
-            <th>cantidad</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>correo</th>
             <th>Opciones</th>
         </tr>
     </thead>

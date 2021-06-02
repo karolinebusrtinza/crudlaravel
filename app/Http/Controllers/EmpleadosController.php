@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Empleados;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 class EmpleadosController extends Controller
 {
     /**
@@ -39,8 +40,7 @@ class EmpleadosController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $datosEmpleado=request()->all();
+          $datosEmpleado=request()->all();
         $datosEmpleado=request()->except('_token');
 
         if($request->hasFile('Foto')){
@@ -88,6 +88,7 @@ class EmpleadosController extends Controller
         if($request->hasFile('Foto')){
             $empleado = Empleados::findOrFail($id);
             Storage::delete('public/'.$empleado->Foto);
+          
             $datosEmpleado['Foto']=$request->file('Foto')->store('uploads','public');
         }
       

@@ -5,7 +5,7 @@
     <div style="width:500px; ">
 <form action="{{ url('/empleados')}}" method="POST" enctype="multipart/form-data" class="form-group" style="
 position: relative;
-left: 500px;">
+left: 500px;" enctype="multipart/form-data">
     {{csrf_field()}}
     <label for="Nombre" >{{'Nombre'}}</label>
     <input type="text" class="form-control" name="Nombre" id="Nombre" value="">
